@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Displays</h1>
+<% if @displays.present? %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @displays.each do |display| %>
+      <tr>
+        <td><%= display.title %></td>
+        <td><%= link_to 'Show', display_path(display.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%else%>
+  "No url to display"
+<% end %>
+<br>
+
